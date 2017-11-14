@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title> Brice's hoodie store </title>
+    <style>
+      img {
+        display:inline;
+      }
+      input{
+          width:50px;
+      }
+      #category{
+        display:flex;
+      }
+      
+      #category div{
+        padding: 10px 20px;
+        border-left: black 1px solid;
+        border-right: black 1px solid;
+      }
+        
+
+    </style>
+
+    <script>
+
+    function initPrice(){
+        pr1=5
+        pr2=10
+        pr3=15
+        document.getElementById("span1").innerHTML="price:$"+pr1;
+        document.getElementById("span2").innerHTML="price:$"+pr2;
+        document.getElementById("span3").innerHTML="price:$"+pr3; 
+    }
+        function processOrder(){
+            var q1=parseInt(document.getElementById("q1").value);
+            var q2=parseInt(document.getElementById("q2").value);
+            var q3= parseInt(document.getElementById("q3").value);
+
+        }
+        function calcPriceIN(){
+
+        }
+        var desc = "";
+        $('#cart_back').click(function(){
+            console.log(cartItems)
+            subtotal=0;
+            consub=0;
+            for(var getPrice in cartItems){
+                console.log('$'+getPrice)
+                subtotal+=Items[cartItems[getPrice]]
+
+            
+            }
+        }
+
+      
+       
+                     
+        
+        
+     </script>
+
+    </head>
+
+    <body>
+       <h1> Brice's hoodie store </h1>
+       <div id='category'>
+            <div>        
+                <img width="200px" src = "wb2.jpg"><br>
+                <p>NIKE WINDRUNNER GX1 - MEN'S</p><bR>
+                <span> price $15  x  ... </span>
+                <input type="text" id ="q1"placeholer="Enter #">
+            </div>
+            <div>
+                <img width="200px" src = "wb3.jpg"><br>
+                <p>NIKE WINDRUNNER JACKET - MEN'S</p><bR>
+                <span> price $15  x  ... </span>
+                <input type="text" id ="q2"placeholer="Enter #">
+                </div>
+                <div>
+                <img width="200px" src = "windbreakers.jpg"><br>
+                <p>NIKE WINDRUNNER JACKET - MEN'S</p><bR>
+                <span> price $15  x  ... </span>
+                <input type="text" id ="q3"placeholer="Enter #">
+            </div>
+            <div>
+                <img width="200px" src = "wb4.jpg"><br>
+                <p>NIKE WINDRUNNER JACKET - MEN'S</p><br>
+                <span> price $15  x  ... </span>
+                <input type="text" id ="qt4"placeholer="Enter #">
+            </div>
+            <div>
+                <img width="210px" src = "nike.png"><br>
+                
+
+       </div>
+       
+    </body>
+    <button onclick="processOrder()">Process Order</button>
+    <br>
+    <div  id = "output"> </div>
+
+</html>
